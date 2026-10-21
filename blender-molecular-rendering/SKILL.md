@@ -70,7 +70,7 @@ Molecules:
 - Lighting: white world at strength ~0.3 plus one sun (energy ~1.7, angle ~12°). Camera: orthographic, placed from a centre point, elevation angle and `ortho_scale`; keep the same camera across versions when asked.
 - Density clouds (e.g. hole densities): Gaussian sum on a grid -> Principled Volume with a smooth MapRange cutoff, `volume_step_rate` ~0.25, LOW emission (bright clouds look like they are glowing). Make the volume camera-ray-only (disable diffuse/glossy/transmission/scatter/shadow visibility) so it does not tint neighbouring atoms. Render clouds as separate layers and composite so foreground atoms stay opaque.
 
-Labels and annotation: never in Blender. Export each atom's pixel position with `bpy_extras.object_utils.world_to_camera_view` to a JSON next to the PNG, then draw all labels, arrows and legends in matplotlib on top of the render (vector text, consistent fonts; see the `scientific-plot-style` skill).
+Labels and annotation: never in Blender. Export each atom's pixel position with `bpy_extras.object_utils.world_to_camera_view` to a JSON next to the PNG, then draw all labels, arrows and legends in matplotlib on top of the render (vector text, consistent fonts).
 
 ## 3. Workflow rules
 - Render ONE image and get approval before batch-rendering the rest.
